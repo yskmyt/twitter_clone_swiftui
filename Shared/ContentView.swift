@@ -9,25 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            Text("HOME")
-                .tabItem {
-                    Image(systemName: "house.circle")
-                }
-            Text("SEARCH")
-                .tabItem {
-                    Image(systemName: "magnifyingglass.circle")
-                }
-            Text("NOTIFICATION")
-                .tabItem {
-                    Image(systemName: "bell.circle")
-                }
-            Text("MESSAGE")
-                .tabItem {
-                    Image(systemName: "envelope.circle")
-                }
+        VStack {
+            AppNavBar()
+            TabView {
+                Text("HOME")
+                    .tabItem {
+                        Image(systemName: "house.circle")
+                    }
+                Text("SEARCH")
+                    .tabItem {
+                        Image(systemName: "magnifyingglass.circle")
+                    }
+                Text("NOTIFICATION")
+                    .tabItem {
+                        Image(systemName: "bell.circle")
+                    }
+                Text("MESSAGE")
+                    .tabItem {
+                        Image(systemName: "envelope.circle")
+                    }
+            }
+            .font(.headline)
         }
-        .font(.headline)
     }
 }
 

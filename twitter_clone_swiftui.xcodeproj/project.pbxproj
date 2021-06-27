@@ -15,6 +15,8 @@
 		702488602674B15800C69C92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702488352674B15500C69C92 /* ContentView.swift */; };
 		702488612674B15800C69C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702488362674B15800C69C92 /* Assets.xcassets */; };
 		702488622674B15800C69C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702488362674B15800C69C92 /* Assets.xcassets */; };
+		70E48D1A268878A100A0D750 /* AppNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E48D19268878A100A0D750 /* AppNavBar.swift */; };
+		70E48D1B268878A100A0D750 /* AppNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E48D19268878A100A0D750 /* AppNavBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		702488562674B15800C69C92 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7024885A2674B15800C69C92 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		7024885C2674B15800C69C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70E48D19268878A100A0D750 /* AppNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 				702488342674B15500C69C92 /* twitter_clone_swiftuiApp.swift */,
 				702488352674B15500C69C92 /* ContentView.swift */,
 				702488362674B15800C69C92 /* Assets.xcassets */,
+				70E48D19268878A100A0D750 /* AppNavBar.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -309,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7024885F2674B15800C69C92 /* ContentView.swift in Sources */,
+				70E48D1A268878A100A0D750 /* AppNavBar.swift in Sources */,
 				7024885D2674B15800C69C92 /* twitter_clone_swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				702488602674B15800C69C92 /* ContentView.swift in Sources */,
+				70E48D1B268878A100A0D750 /* AppNavBar.swift in Sources */,
 				7024885E2674B15800C69C92 /* twitter_clone_swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
