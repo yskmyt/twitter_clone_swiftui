@@ -8,23 +8,42 @@
 import SwiftUI
 
 struct AppNavBar: View {
+    @State var showActionSheet = false
+    
     var body: some View {
         HStack {
             Button(action: {
                 print("ハンバーガー")
             }) {
                 Image(systemName: "line.horizontal.3")
-                    .renderingMode(.original)
-            }.padding()
+                    .renderingMode(.original)         }
+            .padding()
+            
             Spacer()
             Text("センター")
             Spacer()
+            
             Button(action: {
-                print("右アイテム")
+                self.$showActionSheet.wrappedValue.toggle()
             }) {
                 Image(systemName: "sparkles")
                     .renderingMode(.original)
-            }.padding()
+            }
+            .padding()
+            .actionSheet(isPresented: self.$showActionSheet, content: {
+                ActionSheet(title: Text("最新ツイートがタイムラインに表示されます"),
+                    message: Text(""),
+                    buttons: [
+                        .default(Text("切り替え"), action: {
+
+                        }),
+                        .default(Text("コンテンツ設定を表示"), action: {
+                            
+                        }),
+                        .cancel()
+                    ]
+                )
+            })
         }
     }
 }

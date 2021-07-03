@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             AppNavBar()
+            
             TabView {
                 Text("HOME")
                     .tabItem {
@@ -28,8 +29,7 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "envelope.circle")
                     }
-            }
-            .font(.headline)
+            }.font(.headline)
         }
     }
 }
