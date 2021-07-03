@@ -15,11 +15,23 @@ struct MenuUpperView: View {
                     Image(systemName: "person.circle.fill")
                         .resizable()
                         .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Text("Nickname")
-                        .font(.headline)
-                    Text("Account ID")
-                        .font(.subheadline)
-                        .foregroundColor(.black)
+                        .onTapGesture {
+                            print("プロフィールに遷移")
+                        }
+                    Button(action: {
+                        print("プロフィールに遷移")
+                    }, label: {
+                        Text("Nickname")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                    })
+                    Button(action: {
+                        print("プロフィールに遷移")
+                    }, label: {
+                        Text("Account ID")
+                            .font(.subheadline)
+                            .foregroundColor(.black)
+                    })
                 }
                 
                 Spacer()
@@ -39,14 +51,14 @@ struct MenuUpperView: View {
             }
             HStack {
                 Button(action: {
-                    print("アカウント選択ボタン")
+                    print("フォロー確認ボタン")
                 }) {
                     Text("0フォロー")
                         .font(.subheadline)
                         .foregroundColor(.black)
                 }
                 Button(action: {
-                    print("アカウント選択ボタン")
+                    print("フォロワー確認ボタン")
                 }) {
                     Text("800万フォロワー")
                         .font(.subheadline)

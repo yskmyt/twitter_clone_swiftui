@@ -15,16 +15,26 @@ struct MenuView: View {
             MenuListView()
             Spacer()
             HStack {
-                Image(systemName: "lightbulb")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                Button(action: {
+                    print("lightbulb")
+                }, label: {
+                    Image(systemName: "lightbulb")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                })
                     
                 Spacer()
-                Image(systemName: "qrcode")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                
+                Button(action: {
+                    print("qrcode")
+                }, label: {
+                    Image(systemName: "qrcode")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                })
+
             }
             .padding(EdgeInsets(top: 0, leading: 16, bottom: 48, trailing: 16))
         }

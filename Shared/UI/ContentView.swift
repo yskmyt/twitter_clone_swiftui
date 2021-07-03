@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @State var showMenu = false
     
     var drag: some Gesture {
@@ -40,6 +39,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let appState = AppState()
+        ContentView().environmentObject(appState)
     }
 }

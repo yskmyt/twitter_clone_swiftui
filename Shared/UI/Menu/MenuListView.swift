@@ -13,47 +13,26 @@ struct MenuListView: View {
         UITableView.appearance().backgroundColor = UIColor.systemGray
     }
     
-    struct Item {
-        let imageName: String
-        let title: String
-    }
-    
-    
-    private let items = [
-        Item(imageName: "person", title: "プロフィール"),
-        Item(imageName: "list.bullet.rectangle", title: "リスト"),
-        Item(imageName: "text.bubble",title: "トピック"),
-        Item(imageName: "bookmark", title: "ブックマーク"),
-        Item(imageName: "bolt", title: "モーメント"),
-        Item(imageName: "star", title: "収益を得る")
-    ]
-    
-    private let otherItems = [
-        Item(imageName: "", title: "設定とプライバシー"),
-        Item(imageName: "", title: "ヘルプセンター"),
-    ]
-    
     var body: some View {
         List {
-            ForEach(0..<items.count) { index in
+            ForEach(0..<MenuItem.allCases.count) { index in
                 HStack(alignment: .center) {
-                    Image(systemName: items[index].imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 24, height: 24)
-                    Text(items[index].title)
+                    if !MenuItem.allCases[index].imageName().isEmpty {
+                        Image(systemName: MenuItem.allCases[index].imageName())
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24)
+                    }
+                    Text(MenuItem.allCases[index].title())
                         .fontWeight(.semibold)
                         .padding(.leading, 8)
+                }.onTapGesture {
+                    print(MenuItem.allCases[index].title())
                 }
-            }
-            .padding(.vertical, 8)
-            .listRowBackground(Color.gray)
-            
-            Spacer().listRowBackground(Color.gray)
-
-            ForEach(0..<otherItems.count) { index in
-                    Text(otherItems[index].title)
-                        .fontWeight(.semibold)
+                
+                if index == MenuItem.profit.rawValue {
+                    Spacer().listRowBackground(Color.gray)
+                }
             }
             .padding(.vertical, 8)
             .listRowBackground(Color.gray)
@@ -64,5 +43,58 @@ struct MenuListView: View {
 struct MenuListView_Previews: PreviewProvider {
     static var previews: some View {
         MenuListView()
+    }
+}
+
+enum MenuItem: Int, CaseIterable {
+    case profile = 0
+    case list = 1
+    case topic = 2
+    case bookmark = 3
+    case moment = 4
+    case profit = 5
+    case setting = 6
+    case help = 7
+    
+    func title() -> String {
+        switch self {
+        case .profile:
+            return "プロフィール"
+        case .list:
+            return "リスト"
+        case .topic:
+            return "トピック"
+        case .bookmark:
+            return "ブックマーク"
+        case .moment:
+            return "モーメント"
+        case .profit:
+            return "収益を得る"
+        case .setting:
+            return "設定とプライバシー"
+        case .help:
+            return "ヘルプセンター"
+        }
+    }
+    
+    func imageName() -> String {
+        switch self {
+        case .profile:
+            return "person"
+        case .list:
+            return "list.bullet.rectangle"
+        case .topic:
+            return "text.bubble"
+        case .bookmark:
+            return "bookmark"
+        case .moment:
+            return "bolt"
+        case .profit:
+            return "star"
+        case .setting:
+            return ""
+        case .help:
+            return ""
+        }
     }
 }

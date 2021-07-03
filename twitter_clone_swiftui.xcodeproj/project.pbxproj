@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701BCAC126916EA600E4D561 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701BCAC026916EA600E4D561 /* HomeView.swift */; };
+		701BCAC526917B4B00E4D561 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701BCAC426917B4B00E4D561 /* AppState.swift */; };
+		701BCAC62691A55900E4D561 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701BCAC426917B4B00E4D561 /* AppState.swift */; };
 		702488502674B15800C69C92 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024884F2674B15800C69C92 /* Tests_iOS.swift */; };
 		7024885B2674B15800C69C92 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024885A2674B15800C69C92 /* Tests_macOS.swift */; };
 		7024885D2674B15800C69C92 /* twitter_clone_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702488342674B15500C69C92 /* twitter_clone_swiftuiApp.swift */; };
@@ -15,8 +18,6 @@
 		702488602674B15800C69C92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702488352674B15500C69C92 /* ContentView.swift */; };
 		702488612674B15800C69C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702488362674B15800C69C92 /* Assets.xcassets */; };
 		702488622674B15800C69C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702488362674B15800C69C92 /* Assets.xcassets */; };
-		70E48D1A268878A100A0D750 /* AppNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E48D19268878A100A0D750 /* AppNavBar.swift */; };
-		70E48D1B268878A100A0D750 /* AppNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E48D19268878A100A0D750 /* AppNavBar.swift */; };
 		70E48D2026904FF600A0D750 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E48D1F26904FF600A0D750 /* MainView.swift */; };
 		70E48D2126904FF600A0D750 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E48D1F26904FF600A0D750 /* MainView.swift */; };
 		70E48D242690699600A0D750 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E48D232690699600A0D750 /* MenuView.swift */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		701BCAC026916EA600E4D561 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		701BCAC426917B4B00E4D561 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		702488342674B15500C69C92 /* twitter_clone_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitter_clone_swiftuiApp.swift; sourceTree = "<group>"; };
 		702488352674B15500C69C92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		702488362674B15800C69C92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		702488562674B15800C69C92 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7024885A2674B15800C69C92 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		7024885C2674B15800C69C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70E48D19268878A100A0D750 /* AppNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavBar.swift; sourceTree = "<group>"; };
 		70E48D1F26904FF600A0D750 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		70E48D232690699600A0D750 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		70E48D272690785D00A0D750 /* MenuUpperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUpperView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		701BCABF26916E8700E4D561 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				701BCAC026916EA600E4D561 /* HomeView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		7024882E2674B15500C69C92 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		702488332674B15500C69C92 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				701BCAC426917B4B00E4D561 /* AppState.swift */,
 				70E48D222690695B00A0D750 /* UI */,
 				702488362674B15800C69C92 /* Assets.xcassets */,
 			);
@@ -168,7 +179,7 @@
 		70E48D222690695B00A0D750 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				70E48D2D2690BE8B00A0D750 /* NavBar */,
+				701BCABF26916E8700E4D561 /* Tab */,
 				70E48D262690784400A0D750 /* Menu */,
 				702488342674B15500C69C92 /* twitter_clone_swiftuiApp.swift */,
 				702488352674B15500C69C92 /* ContentView.swift */,
@@ -185,14 +196,6 @@
 				70E48D2A26907D4200A0D750 /* MenuListView.swift */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		70E48D2D2690BE8B00A0D750 /* NavBar */ = {
-			isa = PBXGroup;
-			children = (
-				70E48D19268878A100A0D750 /* AppNavBar.swift */,
-			);
-			path = NavBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,11 +355,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701BCAC126916EA600E4D561 /* HomeView.swift in Sources */,
 				70E48D242690699600A0D750 /* MenuView.swift in Sources */,
 				70E48D2B26907D4200A0D750 /* MenuListView.swift in Sources */,
+				701BCAC526917B4B00E4D561 /* AppState.swift in Sources */,
 				7024885F2674B15800C69C92 /* ContentView.swift in Sources */,
 				70E48D2026904FF600A0D750 /* MainView.swift in Sources */,
-				70E48D1A268878A100A0D750 /* AppNavBar.swift in Sources */,
 				7024885D2674B15800C69C92 /* twitter_clone_swiftuiApp.swift in Sources */,
 				70E48D282690785D00A0D750 /* MenuUpperView.swift in Sources */,
 			);
@@ -368,9 +372,9 @@
 			files = (
 				70E48D252690699600A0D750 /* MenuView.swift in Sources */,
 				70E48D2C26907D4200A0D750 /* MenuListView.swift in Sources */,
+				701BCAC62691A55900E4D561 /* AppState.swift in Sources */,
 				702488602674B15800C69C92 /* ContentView.swift in Sources */,
 				70E48D2126904FF600A0D750 /* MainView.swift in Sources */,
-				70E48D1B268878A100A0D750 /* AppNavBar.swift in Sources */,
 				7024885E2674B15800C69C92 /* twitter_clone_swiftuiApp.swift in Sources */,
 				70E48D292690785D00A0D750 /* MenuUpperView.swift in Sources */,
 			);
