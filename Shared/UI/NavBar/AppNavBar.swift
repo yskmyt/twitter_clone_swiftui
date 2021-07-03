@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct AppNavBar: View {
+    @Binding var showMenu: Bool
     @State var showActionSheet = false
     
     var body: some View {
         HStack {
             Button(action: {
-                print("ハンバーガー")
+                withAnimation {
+                    showMenu = true
+                }
             }) {
                 Image(systemName: "line.horizontal.3")
                     .renderingMode(.original)         }
@@ -50,6 +53,6 @@ struct AppNavBar: View {
 
 struct AppNavBar_Previews: PreviewProvider {
     static var previews: some View {
-        AppNavBar()
+        AppNavBar(showMenu: .constant(false))
     }
 }

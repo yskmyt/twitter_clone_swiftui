@@ -1,16 +1,19 @@
 //
-//  ContentView.swift
-//  Shared
+//  MainVIew.swift
+//  twitter_clone_swiftui
 //
-//  Created by Yusuke Miyata on 2021/06/12.
+//  Created by Yusuke Miyata on 2021/07/03.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
+    
+    @Binding var showMenu: Bool
+    
     var body: some View {
         VStack {
-            AppNavBar()
+            AppNavBar(showMenu: self.$showMenu)
             
             TabView {
                 Text("HOME")
@@ -34,8 +37,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainVIew_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView(showMenu: .constant(false))
     }
 }
