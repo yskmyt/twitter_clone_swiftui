@@ -8,35 +8,32 @@
 import SwiftUI
 
 struct MenuListView: View {
-    
-    init() {
-        UITableView.appearance().backgroundColor = UIColor.systemGray
-    }
-    
     var body: some View {
-        List {
-            ForEach(0..<MenuItem.allCases.count) { index in
-                HStack(alignment: .center) {
-                    if !MenuItem.allCases[index].imageName().isEmpty {
-                        Image(systemName: MenuItem.allCases[index].imageName())
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
+        ScrollView {
+            LazyVStack(alignment: .leading) {
+                ForEach(0..<MenuItem.allCases.count) { index in
+                    HStack(alignment: .center) {
+                        if !MenuItem.allCases[index].imageName().isEmpty {
+                            Image(systemName: MenuItem.allCases[index].imageName())
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                        }
+                        Text(MenuItem.allCases[index].title())
+                            .fontWeight(.semibold)
+                            .padding(.leading, 8)
+                    }.onTapGesture {
+                        print(MenuItem.allCases[index].title())
                     }
-                    Text(MenuItem.allCases[index].title())
-                        .fontWeight(.semibold)
-                        .padding(.leading, 8)
-                }.onTapGesture {
-                    print(MenuItem.allCases[index].title())
+
+                    if index == MenuItem.profit.rawValue {
+                        Spacer()
+                    }
                 }
-                
-                if index == MenuItem.profit.rawValue {
-                    Spacer().listRowBackground(Color.gray)
-                }
+                .padding(.vertical, 8)
+                .listRowBackground(Color.gray)
             }
-            .padding(.vertical, 8)
-            .listRowBackground(Color.gray)
-        }
+        }.padding()
     }
 }
 
